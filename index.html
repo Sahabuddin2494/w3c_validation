@@ -9,30 +9,21 @@
 <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <body>
-  
-  <section class="rasel">
- <div class="container">
-  <div class="row">
-    <div class="col-lg-4">
-       <a href=""> <img id="one" src="images/aniversary1.jpg" alt="" class="img-fluid"></a>
-    </div>
-    <div class="col-lg-4">
-      <a href=""> <img id="two" src="images/aniversary2.jpg" alt="" class="img-fluid"></a>
-   </div>
-   <div class="col-lg-4">
-    <a href=""> <img id="three" src="images/aniversary3.jpg" alt="" class="img-fluid"></a>
- </div>
- <div class="col-lg-4">
-  <a href=""> <img id="tt" src="images/aniversary1.jpg" alt="" class="img-fluid"></a>
-</div>
-  </div>
- </div>
-  </section>
-  <script>
-    const x=document.querySelector("#tt");
-    x.innerHTML=Date();
-  </script>
 
+  <div class="container-fluid">
+    <div class="main">
+     
+      <h1>addEventListener</h1>
+      <a href="#" class="btn btn-primary tt">Submit</a>
+    </div>
+  </div>
+
+    
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+         const x=document.querySelector(".tt");
+         x.addEventListener("click",myfunction);
+
+  </script>
 </body>
 </html>
