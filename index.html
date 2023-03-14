@@ -10,29 +10,64 @@
 </head>
 <body>
 
-  <div class="container-fluid">
-    <div class="main">
-     
-      <h1>addEventListener</h1>
-      <a href="#" class="btn btn-primary tt">Submit</a>
+  <section class="rasel">
+<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-4">
+              <div class="rasel_one" onclick="myfunction()">
+                  rasel_one
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="rasel_two">
+              rasel_two
+            </div>
+          </div>
+          <!-- two_end -->
+          <div class="col-lg-4">
+            <div class="rasel_three">
+              rasel_three
+             </div>
+          </div>
+          <!-- end -->
+        
+      </div>
     </div>
-  </div>
+</div>
+  </section>
 
-    
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-         const x=document.querySelector("h1");
-         const y=document.querySelector(".tt");
-         y.addEventListener("click",myfunction);
-         function myfunction(){
-          x.style.display="none";
-          document.addEventListener("mousemove",myfunctio);
+<script>
+     const x=document.querySelector(".rasel_one");
 
-          function myfunctio(){
-            x.style.display="block";
-          }
-         }
 
-  </script>
+
+     function myfunction(){
+      x.style.animation="mymove 4s 2";
+      x.addEventListener("animationstart", mystart);
+      x.addEventListener("animationiteration",myrepeat);
+      x.addEventListener("animationend",myend)
+    }
+    function mystart(){
+      x.style.backgroundColor="blue";
+      x.style.color="white";
+      x.style.fontSize="30px";
+      x.style.fontWeight="bold";
+    }
+    function myrepeat(){
+      x.style.backgroundColor="yellow";
+      x.style.color="white";
+      x.style.fontSize="50px";
+      x.style.fontWeight="bold";
+    }
+    function myend(){
+      x.style.backgroundColor="green";
+      x.style.color="white";
+      x.style.fontSize="50px";
+      x.style.fontWeight="bold";
+    }
+
+</script>
+  <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
